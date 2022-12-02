@@ -41,7 +41,6 @@ button {
 #root {
   display: block;
   margin-inline: auto;
-  padding-block: 1em;
 }
 
 .home-screen, .quiz{
