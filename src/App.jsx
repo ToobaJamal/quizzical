@@ -1,17 +1,22 @@
 import { useState } from 'react'
 import Home from './components/Home'
+import Quiz from './components/Quiz'
+
+
 
 function App() {
   const [start, setStart] = useState(false)
 
   function toggleStart() {
     setStart(prevStart => !prevStart)
-    console.log(start)
   }
 
+  console.log(start)
+
+
   return(
-    <div>
-      <Home toggleStart={toggleStart}/>
+    <div className='parent'>
+      {start ? <Quiz start={start}/> : <Home toggleStart={toggleStart}/>}  
     </div>
   )
 
