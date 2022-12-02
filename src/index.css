@@ -50,7 +50,6 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 .quizzical, .score-hist {
@@ -82,11 +81,9 @@ button {
   max-width: 500px;
   display: block;
   margin-inline: auto;
-  border: 1px solid saddlebrown;
 }
 
 .quiz {
-  padding-block: 1em;
   margin-block: auto;
 }
 
@@ -140,12 +137,13 @@ button {
   text-align: center;
 }
 
-.score-history, .check-ans, .clear-score {
+.score-history, .check-ans {
   background-color: #4D5B9E;
   color: #F5F7FB;
   font-size: 10.24px;
   font-weight: 600;
   border-radius: 10px;
+  margin-bottom: 1.5em;
 }
 
 .clear-score {
