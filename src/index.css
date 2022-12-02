@@ -3,11 +3,8 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
   color: #293264;
-
   background-color: #F5F7FB;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,11 +14,10 @@
 
 body {
   margin: 0;
-  
+  display: flex;
   place-items: center;
+  min-height: 100vh;
 }
-
-
 
 h1, p {
   margin: 0;
@@ -41,15 +37,11 @@ button {
 #root {
   display: block;
   margin-inline: auto;
+  padding-block: 1em;
 }
 
-.home-screen, .quiz{
+.home-screen {
   text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .quizzical, .score-hist {
@@ -80,11 +72,11 @@ button {
   max-width: 22em;
   max-width: 500px;
   display: block;
-  margin-inline: auto;
+  margin-block: auto;
 }
 
 .quiz {
-  margin-block: auto;
+  padding-block: 1em;
 }
 
 .question-title, .quizzical, .scores {
@@ -137,13 +129,12 @@ button {
   text-align: center;
 }
 
-.score-history, .check-ans {
+.score-history, .check-ans, .clear-score {
   background-color: #4D5B9E;
   color: #F5F7FB;
   font-size: 10.24px;
   font-weight: 600;
   border-radius: 10px;
-  margin-bottom: 1.5em;
 }
 
 .clear-score {
@@ -176,7 +167,7 @@ button {
 
 .score-hist {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.4em;
 }
 .blob {
   position: absolute;
