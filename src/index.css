@@ -14,9 +14,8 @@
 
 body {
   margin: 0;
-  display: flex;
+  box-sizing: border-box;
   place-items: center;
-  min-height: 100vh;
 }
 
 h1, p {
@@ -37,11 +36,19 @@ button {
 #root {
   display: block;
   margin-inline: auto;
-  padding-block: 1em;
+}
+
+.home-screen, .quiz{
+  text-align: center;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-screen {
-  text-align: center;
+  height: 100vh;
 }
 
 .quizzical, .score-hist {
@@ -62,6 +69,14 @@ button {
   border-radius: 15px;
 }
 
+.btn-go-back {
+  background-color: #293264;
+  color: #F5F7FB;
+  border-radius: 15px;
+  padding: 2em, 4em;
+  margin-top: 1em;
+}
+
 .line {
   border: 2px solid #DBDEF0;
   margin-top: 0.8em;
@@ -72,11 +87,11 @@ button {
   max-width: 22em;
   max-width: 500px;
   display: block;
-  margin-block: auto;
+  margin-inline: auto;
 }
 
 .quiz {
-  padding-block: 1em;
+  margin-block: auto;
 }
 
 .question-title, .quizzical, .scores {
@@ -127,14 +142,20 @@ button {
 
 .score-hist-parent {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.score-history, .check-ans, .clear-score {
+.score-history, .check-ans {
   background-color: #4D5B9E;
   color: #F5F7FB;
   font-size: 10.24px;
   font-weight: 600;
   border-radius: 10px;
+  margin-bottom: 1.5em;
 }
 
 .clear-score {
@@ -167,10 +188,10 @@ button {
 
 .score-hist {
   text-align: center;
-  margin-bottom: 0.4em;
+  margin-bottom: 1em;
 }
 .blob {
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 .blob-yellow {
