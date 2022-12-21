@@ -1,8 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {
+    Route,
+    Routes,
+    Link
+  } from "react-router-dom"
 import {nanoid} from "nanoid"
 import Quizcard from './Quizcard'
 import Scores from './Scores'
+import { Context } from '../Context'
+
 export default function Quiz(props) {
+    const {displayScore} = useContext(Context)
     const [questions, setQuestions] = React.useState(null)
     const [checked, setChecked] = React.useState(false)
     const [correct, setCorrect] = React.useState(0)
@@ -72,18 +80,28 @@ export default function Quiz(props) {
         )
     }) : []
 
+    console.log("Quiz elems", quizElements)
 
     return(
         <div className='quiz'>
-            {showScore ? <Scores scoreList={JSON.parse(localStorage.getItem("scores"))}/> : <div>
+            {/* {showScore && <Routes><Route path='score' element={<Scores scoreList={JSON.parse(localStorage.getItem("scores"))}/>}/></Routes>} */}
+    {quizElements}
+    {checked && <span className='score'>You scored {correct}/5 correct answers</span>}
+    <div className='score-check-parent'>
+    {scores.length > 0 && <Link to="/score"><button className="score-history" onClick={displayScore}>Score History</button></Link>}
+    <button className='check-ans' onClick={checked ? playAgain : checkScore}>{checked ? 'Play Again' : 'Check Answer'}</button>
+    
+</div>
+            {/* {showScore ? <Scores scoreList={JSON.parse(localStorage.getItem("scores"))}/> : <div>
     {quizElements}
     {checked && <span className='score'>You scored {correct}/5 correct answers</span>}
     <div className='score-check-parent'>
     {scores.length > 0 && <button className="score-history" onClick={showScores}>Score History</button>}
     <button className='check-ans' onClick={checked ? playAgain : checkScore}>{checked ? 'Play Again' : 'Check Answer'}</button>
     </div>
-</div>}
+</div>} */}
+
         </div>
-)
+) 
 }
 

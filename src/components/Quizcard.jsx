@@ -35,6 +35,6 @@ export default function Quizcard(props) {
             </div>
             <div className='line'></div>
         </div>
-    )
+    ) 
 }
 
