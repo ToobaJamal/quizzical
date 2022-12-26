@@ -84,24 +84,13 @@ export default function Quiz(props) {
 
     return(
         <div className='quiz'>
-            {/* {showScore && <Routes><Route path='score' element={<Scores scoreList={JSON.parse(localStorage.getItem("scores"))}/>}/></Routes>} */}
-    {quizElements}
-    {checked && <span className='score'>You scored {correct}/5 correct answers</span>}
-    <div className='score-check-parent'>
-    {scores.length > 0 && <Link to="/score"><button className="score-history" onClick={displayScore}>Score History</button></Link>}
-    <button className='check-ans' onClick={checked ? playAgain : checkScore}>{checked ? 'Play Again' : 'Check Answer'}</button>
-    
-</div>
-            {/* {showScore ? <Scores scoreList={JSON.parse(localStorage.getItem("scores"))}/> : <div>
-    {quizElements}
-    {checked && <span className='score'>You scored {correct}/5 correct answers</span>}
-    <div className='score-check-parent'>
-    {scores.length > 0 && <button className="score-history" onClick={showScores}>Score History</button>}
-    <button className='check-ans' onClick={checked ? playAgain : checkScore}>{checked ? 'Play Again' : 'Check Answer'}</button>
-    </div>
-</div>} */}
-
-        </div>
+            {quizElements}
+            {checked && <span className='score'>You scored {correct}/5 correct answers</span>}
+            <div className='score-check-parent'>
+            {scores.length > 0 && <Link to="/score"><button className="score-history" onClick={displayScore}>Score History</button></Link>}
+            <button className='check-ans' onClick={checked ? playAgain : checkScore}>{checked ? 'Play Again' : 'Check Answer'}</button>
+            </div>
+         </div>
 ) 
 }
 
