@@ -22,12 +22,7 @@ function App() {
       <Route exact path="/quiz" element={ ( <Quiz start={start}/>) }/> : 
       <Route path="/"  element={ (<Home toggleStart={toggleStart}/>) }
       />
-
       showScore && <Route path='/score' element={<Scores scoreList={JSON.parse(localStorage.getItem("scores"))}/>}/>
-    {/* <Route exact path="/"  element={ ( <Home toggleStart={toggleStart}/>) }/> */}
-    {/* {start && <Route path="/quiz"  element={ ( <Quiz start={start}/>) }/>} */}
-    {/* <Route exact path="/" element={ start ? ( <Quiz start={start}/>) : (<Home toggleStart={toggleStart}/>)} /> */}
-    {/* {start ? <Quiz start={start}/> : <Home toggleStart={toggleStart}/>}   */}
     </Routes>
   )
 
