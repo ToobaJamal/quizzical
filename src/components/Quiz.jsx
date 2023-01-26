@@ -80,7 +80,6 @@ export default function Quiz(props) {
         )
     }) : []
 
-    console.log("Quiz elems", quizElements)
 
     return(
         <div className='quiz'>
