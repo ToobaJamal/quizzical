@@ -15,7 +15,7 @@ function App() {
   function toggleStart() {
     setStart(prevStart => !prevStart)
   }
-  console.log(showScore)
+  
   return(
    <Routes>
       start ? 
